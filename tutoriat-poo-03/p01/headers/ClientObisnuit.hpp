@@ -1,13 +1,20 @@
-//
-// Created by Tiberiu on 11/15/2022.
-//
-
 #ifndef P01_CLIENTOBISNUIT_HPP
 #define P01_CLIENTOBISNUIT_HPP
 
 
-class ClientObisnuit {
+#include "Client.hpp"
 
+class ClientObisnuit : public Client{
+private:
+
+public:
+    ClientObisnuit() = default;
+    ~ClientObisnuit() override = default;
+    ClientObisnuit(const ClientObisnuit&) = default;
+    ClientObisnuit& operator=(const ClientObisnuit&) = default;
+
+    void read(std::istream& in) override;
+    void print(std::ostream &out) override;
 };
 
 
